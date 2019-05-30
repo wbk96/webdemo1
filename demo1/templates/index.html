@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Fiction Multipage Bootstrap Template</title>
+    <title>Num1</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Lora|Poppins:300,400,500,600,700|Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Lora|Poppins:300,400,500,600,700|Roboto:100,300,400,500,700,900" rel="stylesheet">-->
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -41,18 +41,9 @@
     </style>
     
 
-
-
-
-
-
     <script src="/static/js/modernizr.min.js"></script>
   </head>
   <body>
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
   <!-- Loader to display before content Load-->
   <div class="loading">
 
@@ -98,13 +89,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Service</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="{% url 'web:index' %}">首页</a></li>
+        <li><a href="{% url 'web:services' %}">服务</a></li>
+        <li><a href="{% url 'web:itemn' %}">产品</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="{% url 'web:contact' %}">联系</a></li>
       </ul>
-    </div><!-- /.navbar-collapse -->
+    </div>
   </div>
 </nav>
 
@@ -114,8 +105,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>We’re Creative <br>
-            We Ensure Quality Design</h1>
+          <h1>我们是有创意的， <br>
+            我们保证质量设计</h1>
         </div>
       </div>
     </div>
@@ -126,7 +117,7 @@
 
  <!-- Case Study Sections
   =========================-->
-
+<!--案例研究-->
   <section class="case-study">
     <div class="text-center">
       <h2 class="title">案例研究</h2>
@@ -141,7 +132,7 @@
           {% if forloop.counter == 1 %}
           <div class="col-md-6">
             <div class="img-content">
-              <img class="img-responsive" src="/static/media/{{ article.img }}" alt="">
+                <img class="img-responsive" src="/static/media/{{ article.img }}" alt="">
             </div>
           </div>
           <div class="col-md-6">
@@ -183,7 +174,7 @@
 
   </section>
   
-<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >自助建站</a></div>
+
   <!-- Clients Sections
   =========================-->
   <!--客户意见-->
@@ -279,7 +270,7 @@
       {% endfor %}
     <div class="col-md-12">
       <div class="join-team text-center">
-        <a class="btn btn-default btn-main" href="#" role="button">加入我们的团队</a>
+        <a class="btn btn-default btn-main" href="{% url 'web:jointeam' %}" role="button">加入我们的团队</a>
       </div>
     </div>
     </div>
@@ -297,9 +288,11 @@
       <div class="row">
         <div class="col-md-12">
           <div class="block">
-              <h2>Get In Touch</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero fugiat cum ad officia, harum, et voluptas quia vel voluptatem aliquam, facilis corporis nam tempore ullam doloribus iusto sequi ipsum. Fugiat non culpa ad beatae sed dolorem doloribus accusamus</p>
-              <a class="btn btn-default btn-main" href="#" role="button">Contact Us</a>
+              <h2>联系我们</h2>
+              <p>我们拥有最顶尖的技术支持，<br>
+                  可以满足任何需求，<br>
+                  需要的请联系我们。</p>
+              <a class="btn btn-default btn-main" href="#" role="button">发起联系</a>
             </div>
           </div>
         </div>
@@ -317,22 +310,22 @@
                             <!-- footer About section
                             ========================== -->
                             <div class="footer-about">
-                                <h3 class="footer-title">About</h3>
-                                <p>Nemo enim ipsam voluptatem quia voluptas <br>
-                                 sit aspernatur aut odit aut fugit, sed quia <br>
-                                  magni dolores eos qui ratione. ed quia <br>
-                                  magni dolores</p>
+                                <h3 class="footer-title">关于</h3>
+                                <p>梦想还是要有的，万一见鬼了呢？<br>
+                                 看见别人都那么努力，那么勤奋， <br>
+                                  那么意气风发地走在成功的路上，你问问自己， <br>
+                                  难道就不想成为他们的绊脚石吗？</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <!-- footer Address section
                             ========================== -->
                             <div class="footer-address">
-                                <h3 class="footer-title">Address</h3>
-                                <p>DeviserWeb 24/A,Jalalabad amborkhana amagnina, Sylhet.</p>
+                                <h3 class="footer-title">地址</h3>
+                                <p>某某市某某路某某号楼3楼</p>
                                 <p class="contact-address">
-                                    Contact us : <a href="tel:+610383666274">+61 (0) 3 8366 6274 </a> <br>
-                                    Write us : <a href="mailto:info@info.com">mail@itsnuman.com</a>
+                                    联系方式 : <a href="tel:+610383666274">不方便透漏</a> <br>
+                                    给我们写信 : <a href="mailto:info@info.com">不要想着写信，不接收的</a>
                                 </p>
                             </div>
                         </div>
@@ -340,7 +333,7 @@
                             <!-- footer Media link section
                             ========================== -->
                             <div class="footer-social-media">
-                                <h3 class="footer-title">Keep in touch</h3>
+                                <h3 class="footer-title">保持联系</h3>
                                 <ul class="footer-media-link">
                                     <li><a href="#"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
@@ -354,11 +347,11 @@
                     <div class="footer-nav text-center">
                         <div class="col-md-12">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="services.html">服务</a></li>
+                                <li><a href="portfolio.html">产品</a></li>
+                                <li><a href="#">我们的团队</a></li>
+                                <li><a href="contact.html">联系</a></li>
                             </ul>
                         </div>
                     </div>
@@ -387,9 +380,6 @@
     <!--<script src="/static/js/parallax.min.js"></script>-->
     <!-- Video -->
     <script src="/static/js/jquery.vide.js"></script>
-   
- 
-
 
     <!-- =======
         Main Js

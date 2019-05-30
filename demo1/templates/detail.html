@@ -40,18 +40,10 @@
 
     </style>
 
-
-
-
-
-
-
     <script src="/static/js/modernizr.min.js"></script>
   </head>
   <body>
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+
 
   <!-- Loader to display before content Load-->
   <div class="loading">
@@ -78,39 +70,36 @@
   </div>
 
 
-  <!-- header-section
-  =========================-->
-  <header class="header portfolio-header th-normal" data-parallax="scroll" data-image-src="images/header/portfolio-folding-img.jpg">
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <button id="trigger-overlay" class="th-nav-btn" type="button"><i class="tf-ion-android-menu"></i></button>
-          <div class="col-md-12">
-            <h1 class="text-center">Contact Us. <br> We Ensure Quality Design.</h1>
 
-            <!-- Themefisher Navigation -->
-            <div class="overlay overlay-hugeinc">
-              <button type="button" class="overlay-close th-close-btn"><i class="tf-ion-close"></i></button>
-
-              <nav>
-                <ul class="th-nav">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="portfolio.html">Portfolio</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </nav>
-            </div><!--/.End Nav -->
-
-          </div>
-        </div><!-- /.row End -->
-      </div>
+<nav class="navbar navbar-fixed-top navigation" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand logo" href="index.html">
+        <img src="images/logo-yellow.png" alt="">
+      </a>
     </div>
-  </header>
 
-  <!-- Portfolio Single Sections
-  ================================-->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right menu">
+        <li><a href="{% url 'web:index' %}">首页</a></li>
+        <li><a href="{% url 'web:services' %}">服务</a></li>
+        <li><a href="{% url 'web:itemn' %}">产品</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="{% url 'web:contact' %}">联系</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav><!-- /.navbar-collapse -->
+
+
+
   <section class="portfolio-single">
     <div class="container-fluid padding-0">
       <div class="row margin-0">
@@ -130,9 +119,6 @@
     </div>
   </section>
 
-  <!-- Gallery Sections
-  =========================-->
-
 
     <footer class="footer">
         <div class="container">
@@ -143,22 +129,22 @@
                             <!-- footer About section
                             ========================== -->
                             <div class="footer-about">
-                                <h3 class="footer-title">About</h3>
-                                <p>Nemo enim ipsam voluptatem quia voluptas <br>
-                                 sit aspernatur aut odit aut fugit, sed quia <br>
-                                  magni dolores eos qui ratione. ed quia <br>
-                                  magni dolores</p>
+                                <h3 class="footer-title">关于</h3>
+                                <p>梦想还是要有的，万一见鬼了呢？<br>
+                                 看见别人都那么努力，那么勤奋， <br>
+                                  那么意气风发地走在成功的路上，你问问自己， <br>
+                                  难道就不想成为他们的绊脚石吗？</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <!-- footer Address section
                             ========================== -->
                             <div class="footer-address">
-                                <h3 class="footer-title">Address</h3>
-                                <p>DeviserWeb 24/A,Jalalabad amborkhana amagnina, Sylhet.</p>
+                                <h3 class="footer-title">地址</h3>
+                                <p>某某市某某路某某号楼3楼</p>
                                 <p class="contact-address">
-                                    Contact us : <a href="tel:+610383666274">+61 (0) 3 8366 6274 </a> <br>
-                                    Write us : <a href="mailto:info@info.com">mail@itsnuman.com</a>
+                                    联系方式 : <a href="tel:+610383666274">不方便透漏</a> <br>
+                                    给我们写信 : <a href="mailto:info@info.com">不要想着写信，不接收的</a>
                                 </p>
                             </div>
                         </div>
@@ -166,7 +152,7 @@
                             <!-- footer Media link section
                             ========================== -->
                             <div class="footer-social-media">
-                                <h3 class="footer-title">Keep in touch</h3>
+                                <h3 class="footer-title">保持联系</h3>
                                 <ul class="footer-media-link">
                                     <li><a href="#"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
@@ -180,19 +166,18 @@
                     <div class="footer-nav text-center">
                         <div class="col-md-12">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="services.html">服务</a></li>
+                                <li><a href="portfolio.html">产品</a></li>
+                                <li><a href="#">我们的团队</a></li>
+                                <li><a href="contact.html">联系</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="text-center">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>&copy; 2013-2017 All rights reserved. <br>
-                                Design and Developed By Themefisher  / More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                                <p>&copy; 2013-2017 All rights reserved. <br> Design and Developed By Themefisher /  More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
                             </div>
                         </div>
                     </div>
@@ -304,8 +289,8 @@
         });
       }
     </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wnvqSDk17WSacIFP7xJnXYSeIjzU2ts&callback=initMap" async defer>
-</script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wnvqSDk17WSacIFP7xJnXYSeIjzU2ts&callback=initMap" async defer>-->
+<!--</script>-->
 
 
     <!-- =======

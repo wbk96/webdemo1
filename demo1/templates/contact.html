@@ -1,34 +1,34 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
+ <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Fiction Multipage Bootstrap Template</title>
+    <title>加入我们的团队</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Lora|Poppins:300,400,500,600,700|Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Lora|Poppins:300,400,500,600,700|Roboto:100,300,400,500,700,900" rel="stylesheet">-->
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <!-- ThemeFisher Icon -->
-    <link rel="stylesheet" href="css/vendor/themefisher-fonts.css">
+    <link rel="stylesheet" href="/static/css/themefisher-fonts.css">
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="css/vendor/owl.carousel.css">
-    <link rel="stylesheet" href="css/vendor/owl.transitions.css">
+    <link rel="stylesheet" href="/static/css/owl.carousel.css">
+    <link rel="stylesheet" href="/static/css/owl.transitions.css">
     <!-- Light Box -->
-    <link rel="stylesheet" href="css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="/static/css/magnific-popup.css">
     <!-- fullpage -->
-    <link rel="stylesheet" href="css/vendor/fullpage.min.css">
-    <link rel="stylesheet" href="css/vendor/playfairdisplaysc.css">
+    <!--<link rel="stylesheet" href="/static/css/fullpage.min.css">-->
+    <link rel="stylesheet" href="/static/css/playfairdisplaysc.css">
     <!-- <link rel="stylesheet" href="css/vendor/font-awesome.min.css"> -->
 
     <link rel="stylesheet" href="">
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -39,20 +39,10 @@
       /* Optional: Makes the sample page fill the window. */
 
     </style>
-    
 
-
-
-
-
-
-    <script src="js/vendor/modernizr.min.js"></script>
+    <script src="/static/js/modernizr.min.js"></script>
   </head>
   <body>
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
   <!-- Loader to display before content Load-->
   <div class="loading">
 
@@ -96,15 +86,32 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
+    <nav class="navbar navbar-fixed-top navigation" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand logo" href="index.html">
+        <img src="images/logo-yellow.png" alt="">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Service</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="{% url 'web:index' %}">首页</a></li>
+        <li><a href="{% url 'web:services' %}">服务</a></li>
+        <li><a href="{% url 'web:itemn' %}">产品</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="{% url 'web:contact' %}">联系</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
+  </div>
+</nav><!-- /.navbar-collapse -->
   </div>
 </nav>
 
@@ -114,7 +121,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-center">Contact Us. <br> We Ensure Quality Design.</h1>
+        <h1 class="text-center">联系我们<br> 我们确保质量设计.</h1>
       </div>
     </div>
   </div>
@@ -175,6 +182,7 @@
 
  <!-- Contact From Study Sections 
   =========================-->
+    <!--联系输入-->
   <section class="contact-form">
     <div class="container">
       <div class="row">
@@ -184,23 +192,23 @@
         <form class="" method="post">
           <div class="col-md-6">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" class="form-control" placeholder="工作">
               </div>
               <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email">
               </div>
               <div class="form-group margin-0">
-                <input type="text" class="form-control" placeholder="Name">
+                <input type="text" class="form-control" placeholder="姓名">
               </div>
             </div>
             <div class="col-md-6 margin-0">
               <div class="form-group">
-                <textarea class="form-control " rows="3" placeholder="Message"></textarea>
+                <textarea class="form-control " rows="3" placeholder="消息"></textarea>
               </div>
             </div>
           <div class="col-md-12">
             <div class="contact-btn text-center">
-              <input class="btn btn-default btn-main" type="submit" value="Sent Message">
+              <input class="btn btn-default btn-main" type="submit" value="发送">
             </div>
           </div>
         </form>
@@ -208,11 +216,7 @@
     </div>
   </section>
 
-    <a class="btn btn--success btn--floating box-shadow-wide" target="_blank" href="#products/fiction-bootstrap-3-agency-template/">
-    <span class="btn__text">
-        Purchase Full Template Pack
-    </span>
-</a>
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -222,22 +226,22 @@
                             <!-- footer About section
                             ========================== -->
                             <div class="footer-about">
-                                <h3 class="footer-title">About</h3>
-                                <p>Nemo enim ipsam voluptatem quia voluptas <br>
-                                 sit aspernatur aut odit aut fugit, sed quia <br>
-                                  magni dolores eos qui ratione. ed quia <br>
-                                  magni dolores</p>
+                                <h3 class="footer-title">关于</h3>
+                                <p>梦想还是要有的，万一见鬼了呢？<br>
+                                 看见别人都那么努力，那么勤奋， <br>
+                                  那么意气风发地走在成功的路上，你问问自己， <br>
+                                  难道就不想成为他们的绊脚石吗？</p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <!-- footer Address section
                             ========================== -->
                             <div class="footer-address">
-                                <h3 class="footer-title">Address</h3>
-                                <p>DeviserWeb 24/A,Jalalabad amborkhana amagnina, Sylhet.</p>
+                                <h3 class="footer-title">地址</h3>
+                                <p>某某市某某路某某号楼3楼</p>
                                 <p class="contact-address">
-                                    Contact us : <a href="tel:+610383666274">+61 (0) 3 8366 6274 </a> <br>
-                                    Write us : <a href="mailto:info@info.com">mail@itsnuman.com</a>
+                                    联系方式 : <a href="tel:+610383666274">不方便透漏</a> <br>
+                                    给我们写信 : <a href="mailto:info@info.com">不要想着写信，不接收的</a>
                                 </p>
                             </div>
                         </div>
@@ -245,7 +249,7 @@
                             <!-- footer Media link section
                             ========================== -->
                             <div class="footer-social-media">
-                                <h3 class="footer-title">Keep in touch</h3>
+                                <h3 class="footer-title">保持联系</h3>
                                 <ul class="footer-media-link">
                                     <li><a href="#"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
@@ -259,19 +263,18 @@
                     <div class="footer-nav text-center">
                         <div class="col-md-12">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="services.html">服务</a></li>
+                                <li><a href="portfolio.html">产品</a></li>
+                                <li><a href="#">我们的团队</a></li>
+                                <li><a href="contact.html">联系</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="text-center">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>&copy; 2013-2017 All rights reserved. <br>
-                                Design and Developed By Themefisher  / More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                                <p>&copy; 2013-2017 All rights reserved. <br> Design and Developed By Themefisher /  More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
                             </div>
                         </div>
                     </div>
@@ -281,18 +284,18 @@
     </footer>
 
 
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
     <!-- Owl Carousel js -->
-    <script src="js/vendor/owl.carousel.min.js"></script>
+    <script src="/static/js/owl.carousel.min.js"></script>
     <!-- Mixitup -->
-    <script src="js/vendor/jquery.mixitup.js"></script>
+    <script src="/static/js/jquery.mixitup.js"></script>
     <!-- Lightbox -->
-    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
     <!-- Parallax -->
-    <script src="js/vendor/parallax.min.js"></script>
+    <script src="/static/js/parallax.min.js"></script>
     <!-- Video -->
-    <script src="js/vendor/jquery.vide.js"></script>
+    <script src="/static/js/jquery.vide.js"></script>
    
  <script>
       function initMap() {
@@ -383,14 +386,14 @@
         });
       }
     </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wnvqSDk17WSacIFP7xJnXYSeIjzU2ts&callback=initMap" async defer>
-</script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wnvqSDk17WSacIFP7xJnXYSeIjzU2ts&callback=initMap" async defer>-->
+<!--</script>-->
 
 
     <!-- =======
         Main Js
     ============ -->
-    <script src="js/script.js"></script>
+    <script src="/static/js/script.js"></script>
   </body>
 </html>
 
