@@ -175,18 +175,18 @@
         <form class="{% url 'web:contact' %}" method="post">
           <div class="col-md-6">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="工作" name="work">
+                <input type="text" class="form-control" placeholder="工作" name="work" required>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email" name="email">
+                <input type="email" class="form-control" placeholder="Email" name="email" required>
               </div>
               <div class="form-group margin-0">
-                <input type="text" class="form-control" placeholder="姓名" name="name">
+                <input type="text" class="form-control" placeholder="姓名" name="name" required>
               </div>
             </div>
             <div class="col-md-6 margin-0">
               <div class="form-group">
-                <textarea class="form-control " rows="3" placeholder="消息" name="massige"></textarea>
+                <textarea class="form-control " rows="3" placeholder="消息" name="massige" required></textarea>
               </div>
             </div>
           <div class="col-md-12">

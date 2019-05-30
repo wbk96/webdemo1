@@ -61,7 +61,6 @@ def contact(request):
         email=request.POST.get('email')
         misg=request.POST.get('massige')
         try :
-
             from django.conf import settings
             send_mail(name,misg,settings.DEFAULT_FROM_EMAIL,['1774678547@qq.com'])
             return render(request,'contact.html',{'error':'邮件发送成功'})
@@ -80,6 +79,8 @@ def blog(request):
 #博客文章详情页
 def blogsingle(request,id):
     articles=Article.objects.get(pk=id)
+    articles.views+=1
+    articles.save()
     categorys = Category.objects.all()
     arts = Article.objects.order_by('-creater_time')
     comments = comment.objects.filter(article=id).all()

@@ -139,7 +139,7 @@
                             <img class="img-responsive" src="/static/media/{{ en.img }}" alt="">
                         </div>
                         <div class="blog-content">
-                            <a href="blog-single.html"><h4 class="blog-title">{{ en.title }}</h4></a>
+                            <a href="{% url 'web:blogsingle' en.id %}"><h4 class="blog-title">{{ en.title }}</h4></a>
                             <div class="meta">
                                 <div class="date">
                                     <p>{{ en.views }}<sup>次|</sup>{{ en.creater_time|date:'Y-m'}}</p>
@@ -161,7 +161,7 @@
                             <img class="img-responsive" src="/static/media/{{ en.img }}" alt="">
                         </div>
                         <div class="blog-content">
-                            <a href="blog-single.html"><h4 class="blog-title">{{ en.title }}</h4></a>
+                            <a href="{% url 'web:blogsingle' en.id %}"><h4 class="blog-title">{{ en.title }}</h4></a>
                             <div class="meta">
                                 <div class="date">
                                     <p>{{ en.views }}<sup>次|</sup>{{ en.creater_time|date:'Y-m'}}</p>
