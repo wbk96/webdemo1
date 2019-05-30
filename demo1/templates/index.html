@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="/static/css/playfairdisplaysc.css">
     <!-- <link rel="stylesheet" href="css/vendor/font-awesome.min.css"> -->
 
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/static/fonts/index.php">
 
 
     <link rel="stylesheet" href="/static/css/style.css">
@@ -82,7 +82,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand logo" href="index.html">
-        <img src="images/logo-yellow.png" alt="">
+        <img src="/static/img/logo-yellow.png" alt="">
       </a>
     </div>
 
@@ -92,7 +92,7 @@
         <li><a href="{% url 'web:index' %}">首页</a></li>
         <li><a href="{% url 'web:services' %}">服务</a></li>
         <li><a href="{% url 'web:itemn' %}">产品</a></li>
-        <li><a href="blog.html">博客</a></li>
+        <li><a href="{% url 'web:blog' %}">博客</a></li>
         <li><a href="{% url 'web:contact' %}">联系</a></li>
       </ul>
     </div>
@@ -292,7 +292,7 @@
               <p>我们拥有最顶尖的技术支持，<br>
                   可以满足任何需求，<br>
                   需要的请联系我们。</p>
-              <a class="btn btn-default btn-main" href="#" role="button">发起联系</a>
+              <a class="btn btn-default btn-main" href="{% url 'web:contact' %}" role="button">发起联系</a>
             </div>
           </div>
         </div>

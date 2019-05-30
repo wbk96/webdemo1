@@ -11,4 +11,8 @@ urlpatterns = [
     url(r'^itemn/$',views.itemn,name='itemn'),
     url(r'^itemsingle/(\d+)/$',views.itemsingle,name='itemsingle'),
     url(r'^contact/$',views.contact,name='contact'),
+    url(r'^blog/$',views.blog,name='blog'),
+    url(r'^blogsingle/(\d+)/$',views.blogsingle,name='blogsingle'),
+    url(r'^blogdetail/(\d+)/$',views.blogdetail,name='blogdetail'),
+    url(r'^allblog/$',views.allblog,name='allblog'),
 ]

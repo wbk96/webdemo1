@@ -120,12 +120,13 @@ class Category(models.Model):
 
 # 博客文章
 class Article(models.Model):
+    auto=models.CharField(max_length=20,verbose_name='作者')
     title = models.CharField(max_length=30, verbose_name='文章')
     body = models.TextField()
     creater_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
     views = models.PositiveIntegerField(default=0)
-
+    img=models.ImageField(upload_to='abs')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):

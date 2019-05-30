@@ -80,7 +80,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand logo" href="index.html">
-        <img src="images/logo-yellow.png" alt="">
+        <img src="/static/img/logo-yellow.png" alt="">
       </a>
     </div>
 
@@ -90,7 +90,7 @@
         <li><a href="{% url 'web:index' %}">首页</a></li>
         <li><a href="{% url 'web:services' %}">服务</a></li>
         <li><a href="{% url 'web:itemn' %}">产品</a></li>
-        <li><a href="blog.html">博客</a></li>
+        <li><a href="{% url 'web:blog' %}">博客</a></li>
         <li><a href="{% url 'web:contact' %}">联系</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
