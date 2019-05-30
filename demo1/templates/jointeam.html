@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>加入我们的团队</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Lora|Poppins:300,400,500,600,700|Roboto:100,300,400,500,700,900" rel="stylesheet">-->
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <!-- ThemeFisher Icon -->
+    <link rel="stylesheet" href="/static/css/themefisher-fonts.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="/static/css/owl.carousel.css">
+    <link rel="stylesheet" href="/static/css/owl.transitions.css">
+    <!-- Light Box -->
+    <link rel="stylesheet" href="/static/css/magnific-popup.css">
+    <!-- fullpage -->
+    <!--<link rel="stylesheet" href="/static/css/fullpage.min.css">-->
+    <link rel="stylesheet" href="/static/css/playfairdisplaysc.css">
+    <!-- <link rel="stylesheet" href="css/vendor/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="">
+
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+
+    </style>
+
+    <script src="/static/js/modernizr.min.js"></script>
+  </head>
+<body>
+
+<nav class="navbar navbar-fixed-top navigation" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand logo" href="index.html">
+        <img src="images/logo-yellow.png" alt="">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right menu">
+        <li><a href="{% url 'web:index' %}">首页</a></li>
+        <li><a href="{% url 'web:services' %}">服务</a></li>
+        <li><a href="{% url 'web:itemn' %}">产品</a></li>
+        <li><a href="{% url 'web:blog' %}">博客</a></li>
+        <li><a href="{% url 'web:contact' %}">联系</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div>
+</nav><!-- /.navbar-collapse -->
+
+    <section class="contact-form">
+    <div class="container">
+      <div class="row">
+        <div class="title text-center">
+          <h2>加入我们</h2>
+        </div>
+        <form class="" action="{% url 'web:jointeam' %}" method="post">
+          <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="工作：" name="work" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email：" name="email" required>
+              </div>
+              <div class="form-group margin-0">
+                <input type="text" class="form-control" placeholder="姓名：" name="username" required>
+              </div>
+            </div>
+            <div class="col-md-6 margin-0">
+              <div class="form-group">
+                <textarea class="form-control " rows="3" placeholder="自我介绍"></textarea>
+              </div>
+            </div>
+          <div class="col-md-12">
+            <div class="contact-btn text-center">
+              <input class="btn btn-default btn-main" type="submit" value="提交">
+                {{ error }}
+                <a class="btn btn-default btn-main" type="submit" href="{% url 'web:index' %}">返回首页</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="container">
+                    <div class="footer-top">
+                        <div class="col-md-4">
+                            <!-- footer About section
+                            ========================== -->
+                            <div class="footer-about">
+                                <h3 class="footer-title">关于</h3>
+                                <p>梦想还是要有的，万一见鬼了呢？<br>
+                                 看见别人都那么努力，那么勤奋， <br>
+                                  那么意气风发地走在成功的路上，你问问自己， <br>
+                                  难道就不想成为他们的绊脚石吗？</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!-- footer Address section
+                            ========================== -->
+                            <div class="footer-address">
+                                <h3 class="footer-title">地址</h3>
+                                <p>某某市某某路某某号楼3楼</p>
+                                <p class="contact-address">
+                                    联系方式 : <a href="tel:+610383666274">不方便透漏</a> <br>
+                                    给我们写信 : <a href="mailto:info@info.com">不要想着写信，不接收的</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!-- footer Media link section
+                            ========================== -->
+                            <div class="footer-social-media">
+                                <h3 class="footer-title">保持联系</h3>
+                                <ul class="footer-media-link">
+                                    <li><a href="#"><i class="tf-ion-social-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-linkedin-outline" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-google-outline" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="tf-ion-social-instagram-outline" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-nav text-center">
+                        <div class="col-md-12">
+                            <ul>
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="services.html">服务</a></li>
+                                <li><a href="portfolio.html">产品</a></li>
+                                <li><a href="#">我们的团队</a></li>
+                                <li><a href="contact.html">联系</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="col-md-12">
+                            <div class="copyright">
+                                <p>&copy; 2013-2017 All rights reserved. <br> Design and Developed By Themefisher /  More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Owl Carousel js -->
+    <script src="/static/js/owl.carousel.min.js"></script>
+    <!-- Mixitup -->
+    <script src="/static/js/jquery.mixitup.js"></script>
+    <!-- Lightbox -->
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax -->
+    <!--<script src="/static/js/parallax.min.js"></script>-->
+    <!-- Video -->
+    <script src="/static/js/jquery.vide.js"></script>
+
+ <script>
+      function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.674, lng: -73.945},
+          zoom: 12,
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+      }
+    </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1wnvqSDk17WSacIFP7xJnXYSeIjzU2ts&callback=initMap" async defer>
+</script>
+
+
+    <!-- =======
+        Main Js
+    ============ -->
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
